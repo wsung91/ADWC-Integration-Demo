@@ -83,14 +83,17 @@
 
 
 ### Step 2: Connect to the DBCS instance using SQL Developer
-1. On SQL Developer select View then SSH.
+1. On SQL Developer from the drop down menu, select View and then SSH.
+    <br>
     ![](./images/Lab100/100-9.png)
     <br>
-2. After Clicking on **New SSH Host**, fill in the form with your DBCS instance's information then, click **OK**. 
+2. After Clicking on **New SSH Host**, fill in the form with your DBCS instance's information then, click **OK**.
+    <br>
     ![](./images/Lab100/100-10.png) 
     ![](./images/Lab100/100-11.png)
     <br>
-3. After filling out the following form with correct info, click **Test**, once test is successful, click **Connect** to connect to DBCS. 
+3. After filling out the following form with correct info, click **Test**, once test is successful, click **Connect** to connect to DBCS.
+   <br>
     ![](./images/Lab100/100-12.png)
 
 ### Step 3: Load *CUSTOMERS_DB* table from csv
@@ -203,7 +206,9 @@ ALTER USER db_user QUOTA UNLIMITED ON USERS;
     3. Enter your Cloud **username** and **password**, and click **Sign In**.
 
     ![](./images/Introduction_Start_Here/Intro3.jpg)
+
 2. Provision
+
 ![](./images/Lab100/100-20.png)
 ![](./images/Lab100/100-21.png)
 ![](./images/Lab100/100-22.png)
