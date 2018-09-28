@@ -61,9 +61,11 @@ https://millerhoo.github.io/journey2-new-data-lake/workshops/journey2-new-data-l
 ### Step 5: Generate an AuthToken
 AuthToken is required for an ADWC instance to access data files on Object Storage. 
 1. From the OCI Console, Click **Identity** > **Users**. 
+  
   ![](./images/Lab200/200-7.png)
-  <br>
+  
 2. After selecting a user, click Auth Tokens and then **Generate Token**. Fill in the description and click **Generate Token**. A random token will be generated. <u>*Make sure to copy and save the value that is generated.*</u>
+ 
   ![](./images/Lab200/200-8.png)
   ![](./images/Lab200/200-9.png)
 
