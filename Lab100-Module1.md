@@ -124,6 +124,7 @@ ALTER USER db_user QUOTA UNLIMITED ON USERS;
     ![](./images/Lab100/100-18.png)
     <br>
 9. From tables section under **DB_USER** you should be able to see **CUSTOMERS_DB** table listed. Click on the table and check if the data was loaded correctly
+
     ![](./images/Lab100/100-19.png)
     ![](./images/Lab100/100-39.png)
 
