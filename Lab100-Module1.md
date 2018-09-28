@@ -84,9 +84,8 @@
 
 ### Step 2: Connect to the DBCS instance using SQL Developer
 1. On SQL Developer from the drop down menu, select View and then SSH.
-    <br>
     ![](./images/Lab100/100-9.png)
-    <br>
+
 2. After Clicking on **New SSH Host**, fill in the form with your DBCS instance's information then, click **OK**.
     <br>
     ![](./images/Lab100/100-10.png) 

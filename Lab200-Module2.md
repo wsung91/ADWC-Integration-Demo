@@ -34,6 +34,7 @@
 ## Source: Oracle Big Data Cloud (BDC) + OCI Object Storage
 ### Step 1: Provisioning BDC
 https://millerhoo.github.io/journey2-new-data-lake/workshops/journey2-new-data-lake/?page=LabGuide100StartHere.md
+
 ### Step 2: Upload file **sales.csv** to BDC
 - Download **sales.csv** from _________________include link for download
 - Open a terminal and copy this file to BDC instance using `scp`.
@@ -43,14 +44,14 @@ https://millerhoo.github.io/journey2-new-data-lake/workshops/journey2-new-data-l
 - 
 1. From the Big Data Cloud console, click on the hamburger menu of the instance you created and click **Big Data Cloud Console**
   ![](./images/Lab200/200-1.png)
-  <br>
+  
 2. Click on the Notebook tab to import the zeppelin notebook.
   ![](./images/Lab200/200-2.png)
-  <br>
+  
 3. Click **Import Note** and then **Browse** import the notebook file downloaded previously.  
   ![](./images/Lab200/200-3.png)
   ![](./images/Lab200/200-4.png)
-  <br>
+  
  4. Review the content of the notebook, and run the notebook to create hive table and load data in hdfs to an object storage . 
   ![](./images/Lab200/200-5.png)
 
