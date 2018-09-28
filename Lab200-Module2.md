@@ -41,22 +41,30 @@ https://millerhoo.github.io/journey2-new-data-lake/workshops/journey2-new-data-l
 ### Step 3: Process data in BDC and push to OCI Object Storage
 - Download the Notebook from ________________give the link.
 - 
-
-![](./images/Lab200/200-1.png)
-![](./images/Lab200/200-2.png)
-![](./images/Lab200/200-3.png)
-![](./images/Lab200/200-4.png)
-![](./images/Lab200/200-5.png)
+1. From the Big Data Cloud console, click on the hamburger menu of the instance you created and click **Big Data Cloud Console**
+  ![](./images/Lab200/200-1.png)
+  <br>
+2. Click on the Notebook tab to import the zeppelin notebook.
+  ![](./images/Lab200/200-2.png)
+  <br>
+3. Click **Import Note** and then **Browse** import the notebook file downloaded previously.  
+  ![](./images/Lab200/200-3.png)
+  ![](./images/Lab200/200-4.png)
+  <br>
+ 4. Review the content of the notebook, and run the notebook to create hive table and load data in hdfs to an object storage . 
+  ![](./images/Lab200/200-5.png)
 
 ### Step 4: Verify file in OCI Object Storage
 ![](./images/Lab200/200-6.png)
+
 ### Step 5: Generate an AuthToken
-![](./images/Lab200/200-7.png)
-![](./images/Lab200/200-8.png)
-![](./images/Lab200/200-9.png)
-
-
-
+AuthToken is required for an ADWC instance to access data files on Object Storage. 
+1. From the OCI Console, Click **Identity** > **Users**. 
+  ![](./images/Lab200/200-7.png)
+  <br>
+2. After selecting a user, click Auth Tokens and then **Generate Token**. Fill in the description and click **Generate Token**. A random token will be generated. <u>*Make sure to copy and save the value that is generated.*</u>
+  ![](./images/Lab200/200-8.png)
+  ![](./images/Lab200/200-9.png)
 
 ## Target: Oracle ADWC - *SALES* table - process and verify
 ### Step 1: Create Credential Store

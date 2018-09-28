@@ -14,25 +14,27 @@
 ### Step 1: Provisioning a DBCS instance
 1. Sign in to Oracle Cloud
     1. Go to [cloud.oracle.com](https://cloud.oracle.com), click **Sign In** to sign in with your Oracle Cloud account.
-
+    <br/>
     ![](./images/Introduction_Start_Here/Intro1.jpg)
-
+    <br/>
     2. Enter your **Cloud Account Name** and click **My Services**.
-
+    <br/>
     ![](./images/Introduction_Start_Here/Intro2.jpg)
-
+    <br/>
     3. Enter your Cloud **username** and **password**, and click **Sign In**.
-
+    <br/>
     ![](./images/Introduction_Start_Here/Intro3.jpg)
-
+    <br/>
 2. Provision DBCS
+    <br/>
     1. From dashboard, click on **Database**
 
         ![](./images/Lab100/100-1.png)
+    <br/>
     
     2. Click on **Create Instance**
         ![](./images/Lab100/100-2.png)
-
+    <br/> 
     3. Provide details for your database instance.
         <ol type="a">
             <li>
@@ -43,7 +45,7 @@
             <b>Database Type</b>: Select <b>Single Instance</b> from the drop-down<br>
             Click on <b>Next</b>
             <img src="./images/Lab100/100-3.png" alt="100-3">
-            </li>
+            </li><br/>
             <li>
             <b>Database Configuration</b><br>
             <b>DB Name</b>: <b>ORCL</b><br>
@@ -54,7 +56,7 @@
             <b>SSH Public Key</b>: Click on <b>Edit</b>. Uplaod an existing public key or click on <b>Create a New Key</b>
             <img src="./images/Lab100/100-4.png" alt="100-4">
             <img src="./images/Lab100/100-5.png" alt="100-5">
-            </li>
+            </li><br/>
             <li>
             <b>Backup and Recovery Configuration</b><br>
             <b>Backup Destination</b>: Select <b>None</b> if you do not want to back up your database. Otherwise, select <b>Both Cloud Storage and Local</b> which will create a cloud storage container in your current identity domain of your cloud account.<br>
@@ -70,7 +72,7 @@
             Check <b>Enable Oracle GoldenGate</b><br>
             Click <b>Next</b>.
             <img src="./images/Lab100/100-7.png" alt="100-7">
-            </li>
+            </li><br>
             <li>
             Verify all the information and notice that a message saying a cloud container is created with the previously stored URL is displayed at the top.<br>
             Click on <b>Create</b>.<br>
@@ -81,10 +83,15 @@
 
 
 ### Step 2: Connect to the DBCS instance using SQL Developer
-![](./images/Lab100/100-9.png)
-![](./images/Lab100/100-10.png)
-![](./images/Lab100/100-11.png)
-![](./images/Lab100/100-12.png)
+1. On SQL Developer select View then SSH.
+    ![](./images/Lab100/100-9.png)
+    <br>
+2. After Clicking on **New SSH Host**, fill in the form with your DBCS instance's information then, click **OK**. 
+    ![](./images/Lab100/100-10.png) 
+    ![](./images/Lab100/100-11.png)
+    <br>
+3. After filling out the following form with correct info, click **Test**, once test is successful, click **Connect** to connect to DBCS. 
+    ![](./images/Lab100/100-12.png)
 
 ### Step 3: Load *CUSTOMERS_DB* table from csv
 1. Once you are connected to the DBCS, create a user *DB_USER* by running the following script in the SQL Developer.
@@ -96,20 +103,33 @@ ALTER USER db_user QUOTA UNLIMITED ON USERS;
 ```
 
 2. Download **customers.csv** from _________________include the file link
-3. Expand **Other Users** under your database connection and find **DB_USER** (or the db user you just created) and right click on **Tables**
-![](./images/Lab100/100-13.png)
-![](./images/Lab100/100-14.png)
-![](./images/Lab100/100-15.png)
-![](./images/Lab100/100-16.png)
-![](./images/Lab100/100-17.png)
-![](./images/Lab100/100-18.png)
-![](./images/Lab100/100-19.png)
-![](./images/Lab100/100-39.png)
+3. Expand **Other Users** under your database connection and find **DB_USER** (or the db user you just created) and right click on **Tables** and then click **Import Data**
+    ![](./images/Lab100/100-13.png)
+    <br>
+4. After clicking **Browse** to find the **customers.csv** file, and setting file format accordingly, click **Next**. 
+    ![](./images/Lab100/100-14.png)
+    <br>
+5. After defining the table name, click **Next**
+    ![](./images/Lab100/100-15.png)
+    <br>
+6. Choose the columns that you want to include in the table and click **Next**
+    ![](./images/Lab100/100-16.png)
+    <br>
+7. Click **Next** after reviewing column formats and data types. 
+    ![](./images/Lab100/100-17.png)
+    <br>
+8. Click finish to start the importing task.
+    ![](./images/Lab100/100-18.png)
+    <br>
+9. From tables section under **DB_USER** you should be able to see **CUSTOMERS_DB** table listed. Click on the table and check if the data was loaded correctly
+    ![](./images/Lab100/100-19.png)
+    ![](./images/Lab100/100-39.png)
 
 ## Target: Oracle ADWC - *CUSTOMERS* table - prerequisite
 ### Create empty table *CUSTOMERS* in ADWC with same structure as *CUSTOMERS* in DBCS
 1. Create a user _ADWC_USER_.
     1. Connect to ADWC instance from SQL Developer as described in ________________include link for Introduction_Start_Here.md
+    <br>
     2. Run the following script to create a user _ADWC_USER_ in the ADWC connection in SQL Developer.
     ```
     CREATE USER ADWC_USER IDENTIFIED BY WelcomeDIPCADWC1;
@@ -119,7 +139,9 @@ ALTER USER db_user QUOTA UNLIMITED ON USERS;
     GRANT INSERT ANY TABLE to ADWC_USER;
     GRANT UPDATE ANY TABLE to ADWC_USER;
     ```
+
 2. Connect to ADWC instance as _ADWC_USER_ as described in ________________include link for Introduction_Start_Here.md, except that in username and password of the connection details, provide those of the user you just created (_ADWC_USER_ in this case).
+<br>
 
 3. Create empty table **CUSTOMERS** in ADWC
     1. Run
@@ -160,7 +182,7 @@ ALTER USER db_user QUOTA UNLIMITED ON USERS;
     ADD CONSTRAINT customers_pk
     PRIMARY KEY (cust_id);
     ```
-
+    <br>
 4. Verify if the table is created. Expand **Tables** and see if the **CUSTOMERS** table is created, if not, right click on **Tables** and select **Refresh**. You should see **CUSTOMERS** table with no data.
 
     ![](./images/Lab100/100-40.png)
